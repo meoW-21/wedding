@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Vibur&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Monsieur+La+Doulaise&family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Vibur", cursive;
+}
+.container {
+  max-width: 1740px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.header {
+  background-image: image-set(
+    "../images/LOGO.avif" type("image/avif"),
+    "../images/LOGO.webp" type("image/webp"),
+    "../images/LOGO.JPG" type("image/jpeg")
+  );
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #efc588;
+  align-content: center;
+}
+.header__flex {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-self: center;
+  justify-self: center;
+}
+.header__child {
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+.name {
+  font-family: "Brygada 1918", serif;
+  font-weight: 700;
+  font-size: 8rem;
+  color: #ffffff;
+  text-align: center;
+}
+.date {
+  font-family: "Stix to text", serif;
+  font-weight: 400;
+  font-size: 5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 60%;
+}
+.and {
+  font-family: "Monsieur La Doulaise";
+  font-weight: 400;
+  font-size: 8rem;
+  color: #ffffff;
+  text-align: center;
+}
+.wedding {
+  font-family: "Monsieur La Doulaise";
+  font-weight: 400;
+  font-size: 10rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 10% auto;
+}
+.main__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.main__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location {
+  align-items: center;
+}
+
+.location__flex {
+  display: flex;
+}
+.adress__button {
+  width: 10%;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  transition: 0.2s linear;
+  background: #ff1515;
+}
+.adress__button:hover {
+  -webkit-transform: rotateZ(5deg);
+  -ms-transform: rotateZ(5deg);
+  transform: rotateZ(5deg);
+}
+.location__child {
+  flex: 1;
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Vibur", cursive;
+  font-weight: 400;
+  align-items: center;
+}
+
+.timing {
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.5;
+
+  font-weight: 800;
+}
+.timing h2 {
+  font-size: 50px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.timing__child_title {
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 30px;
+}
+.timing__child_time {
+  font-weight: 900;
+  margin-top: 40px;
+}
+.timing__child_event {
+  margin-bottom: 20px;
+}
+.dress-code {
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.dress-code__title {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 30px;
+}
+/* .dress-code__exampels-colors {
+  display: flex;
+  align-items: center;
+  margin: auto 40px;
+  flex-flow: row wrap;
+}
+.circle {
+  margin: 40px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.black {
+  background: #000;
+}
+.white {
+  background: #ffffff;
+}
+.boho1 {
+  background: #d8c3b1;
+}
+.boho2 {
+  background: #dfd1c0;
+}
+.boho3 {
+  background: #e9dcd2;
+}
+.boho4 {
+  background: #873b2e;
+}
+.boho-olive {
+  background: #64652b;
+}
+.boho-red {
+  background: #6b0b26;
+} */
+.dress-code__exampels-colors {
+  align-items: center;
+  margin: auto 40px;
+}
+.dress-code__exampels-looks__item {
+  margin: 40px auto;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+/* Блок 5 */
+.rsvp-section {
+  background: linear-gradient(145deg, #f3ede5 0%, var(--boho-cream) 100%);
+}
+
+.form-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 44px 36px;
+  border-radius: 48px 16px 48px 16px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(200, 122, 90, 0.15);
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--boho-charcoal);
+  font-size: 1rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #d6cdc0;
+  border-radius: 40px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  background: white;
+  transition: border 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--boho-terra);
+  box-shadow: 0 0 0 3px rgba(200, 122, 90, 0.2);
+}
+
+.radio-group {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.radio-group input[type="radio"] {
+  width: auto;
+  margin-right: 4px;
+  accent-color: var(--boho-terra);
+}
+
+.btn-submit {
+  background: var(--boho-terra);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border-radius: 60px;
+  width: 100%;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 8px 18px rgba(200, 122, 90, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 16px;
+}
+
+.btn-submit:hover {
+  background: #b0684a;
+  transform: scale(0.98);
+}
+
+.form-message {
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+  min-height: 30px;
+}
