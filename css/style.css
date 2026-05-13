@@ -17,7 +17,7 @@ body {
   align-content: center;
   align-items: center;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-family: "Roboto", cursive;
   color: #ffffff;
@@ -177,70 +177,12 @@ body {
   margin: 30px;
 }
 
-.location {
-  align-items: center;
+.footer {
+  color: #cccccc;
+  font-size: 1rem;
 }
 
-.location__flex {
-  display: flex;
-}
-
-.location__child {
-  flex: 1;
-  padding: 30px 15px;
-  text-align: center;
-  font-size: 3rem;
-
-  font-weight: 200;
-  align-items: center;
-}
-
-.opros {
-  font-size: 2.8rem;
-  line-height: 1.5;
-  font-weight: 200;
-  align-items: center;
-  text-align: center;
-}
-.opros__title {
-  font-size: 4.5rem;
-  font-weight: 500;
-}
-.opros__child_discr {
-  font-size: 3rem;
-  font-weight: 300;
-}
-.opros__child_accept {
-  display: flex;
-  flex-direction: column;
-}
-.opros__child_item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.opros_text {
-  display: inline-block;
-  height: 5rem;
-  width: 90%;
-  font-size: 3rem;
-  padding: 1rem;
-  margin: 1rem;
-}
-.rad {
-  height: 4rem;
-  width: 4rem;
-  display: block;
-  margin: 1rem;
-}
-.check {
-  height: 4rem;
-  width: 4rem;
-  display: block;
-  margin: 1rem;
-}
-
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .adress__button {
     width: 33%;
     height: 100px;
@@ -248,9 +190,37 @@ body {
   .dress-code__exampels-looks__item {
     width: 1020px;
   }
+  .name {
+    font-size: 5rem;
+  }
+  .date {
+    font-size: 3rem;
+    margin-top: 10rem;
+  }
+  .and {
+    font-size: 5rem;
+  }
+  .wedding {
+    font-size: 7rem;
+    margin: 5rem auto;
+  }
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
+  .name {
+    font-size: 4rem;
+  }
+  .date {
+    font-size: 3rem;
+    margin-top: 10rem;
+  }
+  .and {
+    font-size: 5rem;
+  }
+  .wedding {
+    font-size: 5rem;
+    margin: 5rem auto;
+  }
   .adress__button {
     width: 40%;
     height: 100px;

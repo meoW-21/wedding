@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF—8" />
-    <meta name="viewport" content="width=device—width, initial—scale=1.0" viewport-fit=cover/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit=cover, user-scalable=yes/>
     <meta http—equiv="X—UA—Compatible" content="ie=edge" />
     <title>S ❣ V</title>
     <link rel="stylesheet" href="css/reset.css" />
@@ -38,7 +38,7 @@
             </p>
             <p>
               Совсем скоро состоится наша свадьба! Мы рады пригласить вас стать
-              свидетелями этого торжества и разделить с нами самые яркие
+              свидетелями этого события и разделить с нами самые яркие
               моменты!
             </p></div>
             </div></section>
@@ -54,7 +54,7 @@
         <!-- 14:00 – сбор гостей у ЗАГСа -->
         <li class="timing-item">
           <div class="time-marker">
-            <span class="time-dot"></span>
+            
             <span class="time-value">14:00</span>
           </div>
           <div class="item-content">
@@ -91,7 +91,7 @@
           <div class="item-content">
             <div class="item-title">Торжественная церемония</div>
             <div class="item-description">
-              Роспись родных и друзей
+              Роспись среди родных и друзей
             </div>
           </div>
         </li>
@@ -207,7 +207,7 @@
               type="text"
               id="guestName"
               name="guestName"
-              placeholder="Например: Анна и Дмитрий"
+              placeholder="Например: Анна Петрова и Дмитрий Иванов"
               required
               autocomplete="off"
             />
@@ -242,7 +242,7 @@
                 <option value="4">4 человека</option>
                 <option value="5">5+ человек (уточним отдельно)</option>
               </select>
-              <div class="field-note">Это поможет нам с рассадкой</div>
+              
             </div>
 
             <!-- Напитки (чекбоксы) с логикой "не пью" -->
@@ -276,6 +276,14 @@
                   <input type="checkbox" id="drinkVodka" value="Водка" />
                   <label for="drinkVodka">🍸 Водка</label>
                 </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="drinkBeer" value="Пиво" />
+                  <label for="drinkBeer">🍺 Пиво</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="drinkBrandy" value="Коньяк" />
+                  <label for="drinkBrandy">🥃 Коньяк</label>
+                </div>
                 <div class="checkbox-item" id="nonAlcoholWrap">
                   <input type="checkbox" id="drinkNone" value="Не пью" />
                   <label for="drinkNone">🚫 Не пью алкоголь</label>
@@ -298,10 +306,10 @@
       
     </div>
     <footer class="footer">
-      <div class="container">
+      
         <p>Станислав & Валерия · 18.09.2026</p>
         <p style="margin-top: 8px">С любовью ждём вас ✦</p>
-      </div>
+      
     </footer>
     <script src="js/main.js"></script>
   </body>
