@@ -2,13 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF—8" />
-    <meta name="viewport" content="width=device—width, initial—scale=1.0" />
+    <meta name="viewport" content="width=device—width, initial—scale=1.0" viewport-fit=cover/>
     <meta http—equiv="X—UA—Compatible" content="ie=edge" />
     <title>S ❣ V</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/timing.css" />
   </head>
   <body>
+    <div class="bg__img"></div>
     <header class="header">
       <div class="container">
         <div class="header__flex">
@@ -27,7 +30,8 @@
     </header>
     
       <section class="date__image">
-        <div class="container"><div class="date__image_text"><p>Дорогие родные и близкие!</p>
+        <div class="container"><div class="date__image_text">
+            <p class="date__title">Дорогие родные и близкие!</p>
             <p>
               Мы давно ждали момента, когда сможем разделить с вами самый важный
               и счастливый день в нашей жизни.
@@ -37,100 +41,261 @@
               свидетелями этого торжества и разделить с нами самые яркие
               моменты!
             </p></div>
-            <div class="date__image_img">
-              
-            </div></div>
-      </section>
-      <section class="timing">
-        <div class="container">
-         
-          <div class="timing__child">
-            <div class="timing__child_title">ТАЙМИНГ</div>
-            
-            <div class="timing__child_item"><p class="timing__child_time">—14:00—</p>
-            <p class="timing__child_event">Сбор гостей у ЗАГСа</p>
-            <a href="https://yandex.by/maps/-/CPSKrFYz" target="_blank" class="adress__button">ЗАГС на карте</a></div>
-                               
-            <div class="timing__child_item"><p class="timing__child_time">—14:30—</p>
-            <p class="timing__child_event">Торжественная церемония</p></div>
-            
-            <div class="timing__child_item"><p class="timing__child_time">—15:00—</p>
-            <p class="timing__child_event">Едем на базу</p>
-            <a href="https://yandex.by/maps/-/CPSOEB~K" target="_blank"class="adress__button">База на карте</a></div>
-             
-            <div class="timing__child_item"> <p class="timing__child_time">—16:00—</p>
-            <p class="timing__child_event">Фуршет</p><p class="timing__child_discription">Собираемся, знакомимся, готовимся гулять!</p></div>
-            
-            <div class="timing__child_item"> <p class="timing__child_time">—17:00—</p>
-            <p class="timing__child_event">Поздравления от гостей</p></div>
+            </div></section>
+      <div class="container"><div class="timing-wrapper">
+      <!-- Заголовок -->
+      <div class="timing-header">
+        <h2>Тайминг дня</h2>
+        <p class="timing-subtitle">программа свадебного торжества</p>
+      </div>
 
-            <div class="timing__child_item"> <p class="timing__child_time">—18:00—</p>
-            <p class="timing__child_event">Праздничный банкет</p><p class="timing__child_discription">Время вкусной еды, таннцев и развлечений!</p></div>
-
-            <div class="timing__child_item"><p class="timing__child_time">—19 сентября—</p>
-            <p class="timing__child_event">Второй день</p></div>
+      <!-- Список тайминга -->
+      <ul class="timing-list">
+        <!-- 14:00 – сбор гостей у ЗАГСа -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">14:00</span>
           </div>
-        </div>
-      </section>
-      <section class="dress-code">
-        <div class="container"><div class="dress-code__title">ДРЕСС-КОД</div>
-        <div class="dress-code__discription">
-          Для нас главное - ваше присутствие! Но мы будем рады, если в своих
-          нарядах вы поддержите цветовую гамму и стиль нашей свадьбы.
-        </div>
-        <div class="dress-code__exampels-colors">
-          <img class="dress-code__exampels-looks__item" src="images/fullcolor.jpg" alt="">
-        </div>
-        </div>
-          
-          
-      </section>
-      <section class="location">
-        <div class="container">
-          <div class="location__flex">
-            <div class="location__child">
-              Большая база отдыха "ОЛИМПИЕЦ", расположенная на берегу Минского
-              Моря.
+          <div class="item-content">
+            <div class="item-title">Сбор гостей у&nbsp;ЗАГСа</div>
+            <div class="item-description">
+              Московский район, пр-т Дзержинского,&nbsp;5
             </div>
-            
+            <a
+              href="https://yandex.by/maps/157/minsk/?text=ЗАГС%20Московского%20района%20Минска%2C%20проспект%20Дзержинского%205&ll=27.514332%2C53.889961&z=17"
+              class="map-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Посмотреть ЗАГС Московского района на Яндекс Картах"
+            >
+              <span class="map-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+              </span>
+              Посмотреть на карте
+            </a>
           </div>
-        </div>
-      </section>
-      <section class="opros">
+        </li>
 
-        <div class="container">
-          <div class="opros__child">
-            <p class="opros__title">Анкета гостя</p>
-            <p class="opros__description">Ваши ответы на вопросы очень помогут нам при организации свадьбы</p>
+        <!-- 14:30 – торжественная церемония -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">14:30</span>
           </div>
-          
-          <div class="opros__child"><form action="" class="opros__form" method="get">
-            <div class="opros__child_name">
-              <p class="opros__child_discr">Фамилия Имя</p>
-              <input type="text" name="Имя" class="opros_text" placeholder="Иванов Иван">
+          <div class="item-content">
+            <div class="item-title">Торжественная церемония</div>
+            <div class="item-description">
+              Роспись в окружении самых близких
             </div>
-            
-            <div class="opros__child_accept">
-              <p class="opros__child_discr">Порадуете ли Вы нас своей компанией?</p>
-              <div class="opros__child_item"><input type="radio" name="Присутствие" class="rad" value="Буду" required><p>Конечно, да</p> </div>
-              <div class="opros__child_item"><input type="radio" name="Присутствие" class="rad" value="Не буду" required><p>К сожалению, не смогу</p> </div>
-              <div class="opros__child_item"><input type="radio" name="Присутствие" class="rad" value="Пока не знаю" required><p>Отвечу позже (напишу/позвоню)</p> </div>
+          </div>
+        </li>
+
+        <!-- 15:00 – трансфер на базу Олимпиец -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">15:00</span>
+          </div>
+          <div class="item-content">
+            <div class="item-title">Трансфер на базу «Олимпиец»</div>
+            <div class="item-description">
+              Организованный выезд к месту празднования
+            </div>
+            <a
+              href="https://yandex.by/maps/157/minsk/?text=база%20отдыха%20Олимпиец%20Минск&ll=27.3300%2C54.0200&z=14"
+              class="map-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Посмотреть базу Олимпиец на Яндекс Картах"
+            >
+              <span class="map-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  />
+                  <circle cx="12" cy="9" r="2.5" />
+                </svg>
+              </span>
+              Посмотреть на карте
+            </a>
+          </div>
+        </li>
+
+        <!-- 16:00 – фуршет -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">16:00</span>
+          </div>
+          <div class="item-content">
+            <div class="item-title">Фуршет</div>
+            <div class="item-description">
+              Лёгкие закуски и приветственные напитки
+            </div>
+          </div>
+        </li>
+
+        <!-- 17:00 – поздравление молодых -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">17:00</span>
+          </div>
+          <div class="item-content">
+            <div class="item-title">Поздравление молодых</div>
+            <div class="item-description">Тёплые слова и первые тосты</div>
+          </div>
+        </li>
+
+        <!-- 18:00 – праздничный банкет -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">18:00</span>
+          </div>
+          <div class="item-content">
+            <div class="item-title">Праздничный банкет</div>
+            <div class="item-description">
+              Основное застолье и развлекательная программа
+            </div>
+          </div>
+        </li>
+
+        <!-- 23:00 – финал вечера -->
+        <li class="timing-item">
+          <div class="time-marker">
+            <span class="time-dot"></span>
+            <span class="time-value">23:00</span>
+          </div>
+          <div class="item-content">
+            <div class="item-title">Финал вечера</div>
+            <div class="item-description">
+              Завершение праздника, финальный аккорд
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      
+    </div></div>
+
+    </div>
+     
+      <div class="container">
+      <div class="form-container">
+      <div class="form-inner">
+        <div class="hero">
+          <h1>Будете на свадьбе? 💍</h1>
+          <p>
+            Пожалуйста, подтвердите присутствие и расскажите о предпочтениях
+          </p>
+        </div>
+
+        <form id="weddingForm">
+          <!-- Имя гостя (обязательное) -->
+          <div class="field-group">
+            <label
+              >Ваше имя и фамилия <span class="required-star">*</span></label
+            >
+            <input
+              type="text"
+              id="guestName"
+              name="guestName"
+              placeholder="Например: Анна и Дмитрий"
+              required
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Присутствие (radio) -->
+          <div class="field-group">
+            <label
+              >Вы сможете присутствовать?
+              <span class="required-star">*</span></label
+            >
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="attending" value="yes" checked />
+                <span>Да, конечно!</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="attending" value="no" />
+                <span>К сожалению, нет</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Блок, который показывается только при "Да" (гости + напитки) -->
+          <div id="extraFieldsBlock" class="extra-options">
+            <div class="field-group">
+              <label>Сколько человек придет (включая вас)?</label>
+              <select id="guestCount" class="guest-select">
+                <option value="1">Только я (1)</option>
+                <option value="2">2 человека</option>
+                <option value="3">3 человека</option>
+                <option value="4">4 человека</option>
+                <option value="5">5+ человек (уточним отдельно)</option>
+              </select>
+              <div class="field-note">Это поможет нам с рассадкой</div>
             </div>
 
-            <div class="opros__child_accept">
-              <p class="opros__child_discr">Что будете пить (можно выбрать несколько вариантов)</p>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Безалко"> <p>Не пью</p></div>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Вино белое"> <p>Белое вино</p></div>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Вино красное"> <p>Красное вино</p></div>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Шампанское"> <p>Шампанское</p></div>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Виски"> <p>Виски</p></div>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Водка"> <p>Водка</p></div>
-              <div class="opros__child_item"><input type="checkbox" name="Алкоголь" id="" class="check" value="Все"> <p>Всё</p></div>
+            <!-- Напитки (чекбоксы) с логикой "не пью" -->
+            <div class="field-group">
+              <label
+                >Ваши предпочтения по напиткам (можно несколько
+                вариантов)</label
+              >
+              <div class="checkbox-grid" id="drinksChecklist">
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="drinkWhiteWine"
+                    value="Вино белое"
+                  />
+                  <label for="drinkWhiteWine">🍾 Вино белое</label>
+                </div>
+                <div class="checkbox-item">
+                  <input
+                    type="checkbox"
+                    id="drinkRedWine"
+                    value="Вино красное"
+                  />
+                  <label for="drinkRedWine">🍷 Вино красное</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="drinkWhisky" value="Виски" />
+                  <label for="drinkWhisky">🥃 Виски</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="drinkVodka" value="Водка" />
+                  <label for="drinkVodka">🍸 Водка</label>
+                </div>
+                <div class="checkbox-item" id="nonAlcoholWrap">
+                  <input type="checkbox" id="drinkNone" value="Не пью" />
+                  <label for="drinkNone">🚫 Не пью алкоголь</label>
+                </div>
+              </div>
+              <div class="field-note">
+                Если вы не пьете алкоголь, отметьте "не пью"
+              </div>
             </div>
-            
-          </form></div>
-        </div>
-      </section>
+          </div>
+
+          <button type="submit" id="submitBtn">📩 Отправить ответ</button>
+          <div id="formStatus" class="status-message"></div>
+        </form>
+        
+        
+      </div>
+    </div></div>
+
+      
     </div>
     <footer class="footer">
       <div class="container">
