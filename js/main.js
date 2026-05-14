@@ -109,7 +109,8 @@ toggleExtraFields();
 
 // ---------- ОТПРАВКА В GOOGLE SHEETS ----------
 // Замените URL ниже на адрес вашего веб-приложения Apps Script
-const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbzUgXwsXOku8FkkhwS9LoV4RCuefY6JBMtT9wthaaFsRajyigX_133EPfK48dUfaLyqxQ/exec";
 
 const form = document.getElementById("weddingForm");
 const submitBtn = document.getElementById("submitBtn");
