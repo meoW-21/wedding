@@ -39,18 +39,20 @@ const whiteWine = document.getElementById("drinkWhiteWine");
 const redWine = document.getElementById("drinkRedWine");
 const whisky = document.getElementById("drinkWhisky");
 const vodka = document.getElementById("drinkVodka");
+const brandy = document.getElementById("drinkBrandy");
+const beer = document.getElementById("drinkBeer");
 const noneAlcohol = document.getElementById("drinkNone");
 
 function applyNonAlcoholLogic() {
   if (noneAlcohol.checked) {
-    [whiteWine, redWine, whisky, vodka].forEach((cb) => {
+    [whiteWine, redWine, whisky, vodka, beer, brandy].forEach((cb) => {
       if (cb) {
         cb.checked = false;
         cb.disabled = true;
       }
     });
   } else {
-    [whiteWine, redWine, whisky, vodka].forEach((cb) => {
+    [whiteWine, redWine, whisky, vodka, beer, brandy].forEach((cb) => {
       if (cb) cb.disabled = false;
     });
   }
@@ -61,7 +63,7 @@ if (noneAlcohol) {
     if (noneAlcohol.checked) {
       applyNonAlcoholLogic();
     } else {
-      [whiteWine, redWine, whisky, vodka].forEach((cb) => {
+      [whiteWine, redWine, whisky, vodka, beer, brandy].forEach((cb) => {
         if (cb) cb.disabled = false;
       });
     }
@@ -73,7 +75,7 @@ function handleAlcoholClick(alcoholCb) {
   alcoholCb.addEventListener("change", function (e) {
     if (alcoholCb.checked && noneAlcohol.checked) {
       noneAlcohol.checked = false;
-      [whiteWine, redWine, whisky, vodka].forEach((cb) => {
+      [whiteWine, redWine, whisky, vodka, beer, brandy].forEach((cb) => {
         if (cb) cb.disabled = false;
       });
     }
