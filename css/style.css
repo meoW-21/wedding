@@ -223,7 +223,7 @@ body {
     font-size: 5rem;
   }
   .wedding {
-    font-size: 7rem;
+    font-size: 5rem;
     margin: 1rem auto;
   }
   .date__image {
@@ -241,6 +241,7 @@ body {
     font-weight: 200;
   }
   .dress-code__title {
+    font-size: 2rem;
     font-weight: 400;
     margin: 2rem;
   }
@@ -263,13 +264,13 @@ body {
     font-size: 3rem;
   }
   .and {
-    font-size: 5rem;
+    font-size: 3rem;
   }
   .wedding {
     font-size: 3rem;
   }
   .dress-code__title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0.2rem;
   }
 }
