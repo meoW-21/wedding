@@ -81,7 +81,7 @@ body {
   font-size: 5rem;
   color: #ffffff;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 .and {
   font-family: "Monsieur La Doulaise";
@@ -96,27 +96,18 @@ body {
   font-size: 10rem;
   color: #ffffff;
   text-align: center;
-  margin: 5rem auto;
+  margin: 4rem auto;
 }
 
-.timing {
-  padding: 30px 15px;
-  text-align: center;
-  font-size: 3rem;
-  line-height: 1.5;
-
-  font-weight: 500;
-}
 .date__image {
   align-items: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 200;
-  margin: 10rem auto;
 }
 .date__title {
-  font-size: 4rem;
-  font-weight: 200;
+  font-size: 3rem;
+  font-weight: 300;
 }
 .timing__child_title {
   font-size: 4rem;
@@ -164,25 +155,57 @@ body {
   -ms-transform: rotateZ(5deg);
   transform: rotateZ(5deg);
 }
-.dress-code {
-  padding: 30px 15px;
+.dress__wrapper {
+  background: #ffffff;
+  color: #1a1a1a;
+  border-radius: 32px;
+  padding: 1rem;
   text-align: center;
-  font-size: 30px;
-  line-height: 1.5;
   font-weight: 200;
 }
 .dress-code__title {
-  font-size: 50px;
-  font-weight: 700;
-  margin: 30px;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 2rem;
 }
 
+.dress-code__title h2 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  position: relative;
+  display: inline-block;
+}
+.dress-code__title h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #cccccc;
+  margin: 1.2rem auto 0;
+  border-radius: 1px;
+}
+.dress-code__discription {
+  font-size: 1.5rem;
+  margin: 1rem 0.2rem;
+}
+.dress-code__exampel {
+}
+.dress-code__exampel-img {
+  max-width: 100%;
+  max-height: 100%;
+}
 .footer {
   color: #cccccc;
   font-size: 1rem;
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin: 2.5rem auto;
+  }
   .adress__button {
     width: 33%;
     height: 100px;
@@ -195,14 +218,42 @@ body {
   }
   .date {
     font-size: 3rem;
-    margin-top: 10rem;
+    margin-top: 1rem auto;
   }
   .and {
     font-size: 5rem;
   }
   .wedding {
     font-size: 7rem;
-    margin: 5rem auto;
+    margin: 1rem auto;
+  }
+  .date__image {
+    font-size: 1.4rem;
+  }
+  .date__title {
+    font-size: 2rem;
+  }
+  .dress__wrapper {
+    background: #ffffff;
+    color: #1a1a1a;
+    border-radius: 20px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 200;
+  }
+  .dress-code__title {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 2rem;
+  }
+  .dress-code__discription {
+    font-size: 1rem;
+  }
+  .dress-code__exampel {
+  }
+  .dress-code__exampel-img {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
@@ -212,14 +263,12 @@ body {
   }
   .date {
     font-size: 3rem;
-    margin-top: 10rem;
   }
   .and {
     font-size: 5rem;
   }
   .wedding {
     font-size: 5rem;
-    margin: 5rem auto;
   }
   .adress__button {
     width: 40%;

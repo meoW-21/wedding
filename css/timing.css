@@ -26,7 +26,7 @@ body {
 .timing-wrapper {
   color: var(--text);
   background-color: #ffffff;
-  border-radius: 2px;
+  border-radius: 32px;
   padding: 2.5rem;
   max-width: 1080px;
   width: 100%;
@@ -93,7 +93,7 @@ body {
 .timing-list::before {
   content: "";
   position: absolute;
-  left: 1.6rem;
+  left: 1.5rem;
   top: 2.3rem;
   bottom: 2rem;
   width: 2px;
@@ -237,6 +237,7 @@ body {
   .timing-wrapper {
     padding: 2.2rem 1.5rem 2rem;
     max-width: 100%;
+    border-radius: 20px;
   }
 
   /* Немного уменьшаем отступы, чтобы контент лучше помещался,
@@ -254,7 +255,7 @@ body {
   }
 
   .timing-list::before {
-    left: 2rem; /* подгоняем под новую ширину time-marker */
+    left: 1.6rem; /* подгоняем под новую ширину time-marker */
     top: 2.6rem;
     bottom: 1.4rem;
   }
@@ -322,7 +323,7 @@ body {
   }
 
   .timing-list::before {
-    left: 1.7rem;
+    left: 1.55rem;
   }
 
   .item-content {
@@ -336,7 +337,7 @@ body {
 
   .map-button {
     padding: 0.3rem 0.75rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     gap: 0.3rem;
   }
 

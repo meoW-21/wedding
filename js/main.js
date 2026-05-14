@@ -30,6 +30,9 @@
     heroContent.style.transform = "none";
   }
 })();
+// ---------- НАСТРОЙКИ ----------
+// Замените ссылку на актуальный Telegram-канал или чат
+const TELEGRAM_URL = "https://t.me/+tYv0RJXaaeYxYTEy"; // <-- ВСТАВЬТЕ СВОЮ ССЫЛКУ
 
 // ---------- ЛОГИКА ЧЕКБОКСОВ "НЕ ПЬЮ" ----------
 const whiteWine = document.getElementById("drinkWhiteWine");
@@ -106,12 +109,22 @@ toggleExtraFields();
 
 // ---------- ОТПРАВКА В GOOGLE SHEETS ----------
 // Замените URL ниже на адрес вашего веб-приложения Apps Script
-const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzUgXwsXOku8FkkhwS9LoV4RCuefY6JBMtT9wthaaFsRajyigX_133EPfK48dUfaLyqxQ/exec";
+const GOOGLE_SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
 
 const form = document.getElementById("weddingForm");
 const submitBtn = document.getElementById("submitBtn");
 const statusDiv = document.getElementById("formStatus");
+const telegramContainer = document.getElementById("telegramContainer");
+const telegramLink = document.getElementById("telegramLink");
+
+// Устанавливаем реальную ссылку на Telegram (если она не была заменена в коде)
+if (telegramLink && TELEGRAM_URL !== "https://t.me/ваш_телеграм_канал") {
+  telegramLink.href = TELEGRAM_URL;
+} else if (telegramLink) {
+  // Если ссылка по умолчанию, покажем предупреждение в консоли, но оставим рабочую заглушку
+  console.warn("⚠️ Замените TELEGRAM_URL на актуальную ссылку Telegram-канала");
+  telegramLink.href = "https://t.me/joinchat/example"; // запасной вариант
+}
 
 function gatherFormData() {
   const name = document.getElementById("guestName").value.trim();
@@ -156,13 +169,18 @@ function validateForm() {
   if (!name) {
     statusDiv.innerHTML = "❌ Пожалуйста, укажите ваше имя и фамилию.";
     statusDiv.className = "status-message error";
+    // Скрываем Telegram-кнопку при ошибке, если она была показана
+    telegramContainer.style.display = "none";
     return false;
   }
   return true;
 }
 
 async function submitToGoogleSheets(data) {
-  if (GOOGLE_SCRIPT_URL === "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL") {
+  if (
+    GOOGLE_SCRIPT_URL ===
+    "https://script.google.com/macros/s/AKfycbzUgXwsXOku8FkkhwS9LoV4RCuefY6JBMtT9wthaaFsRajyigX_133EPfK48dUfaLyqxQ/exec"
+  ) {
     console.warn(
       "⚠️ Google Sheets URL не настроен. Данные не отправлены, но вы можете скопировать настройки.",
     );
@@ -189,10 +207,38 @@ async function submitToGoogleSheets(data) {
   }
 }
 
+// Показываем Telegram-кнопку (плавно)
+function showTelegramButton() {
+  telegramContainer.style.display = "block";
+  // добавляем небольшую анимацию появления
+  telegramContainer.style.animation = "fadeInUp 0.3s ease";
+}
+
+// Добавляем ключевые кадры для анимации, если их нет
+if (!document.querySelector("#fadeInUpStyle")) {
+  const style = document.createElement("style");
+  style.id = "fadeInUpStyle";
+  style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+  document.head.appendChild(style);
+}
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   statusDiv.innerHTML = "";
   statusDiv.className = "";
+  // Скрываем Telegram-кнопку при новой отправке (чтобы не было дублирования, потом покажем снова при успехе)
+  telegramContainer.style.display = "none";
 
   if (!validateForm()) return;
 
@@ -206,9 +252,12 @@ form.addEventListener("submit", async (e) => {
   if (result.success) {
     statusDiv.innerHTML = "✅ Спасибо! Ваш ответ сохранён. Ждём встречи! 🎉";
     statusDiv.className = "status-message success";
+    // После успешной отправки показываем кнопку перехода в Telegram
+    showTelegramButton();
   } else {
     statusDiv.innerHTML = `❌ Ошибка при отправке: ${result.error || "Попробуйте позже или свяжитесь с организаторами."}`;
     statusDiv.className = "status-message error";
+    telegramContainer.style.display = "none";
   }
 
   submitBtn.disabled = false;
@@ -225,8 +274,15 @@ attendingRadios.forEach((radio) =>
         applyNonAlcoholLogic();
       }
     }, 20);
+    // При смене ответа скрываем Telegram-кнопку, если она была видна
+    telegramContainer.style.display = "none";
   }),
 );
+
+// Также если пользователь начинает редактировать имя, скрываем Telegram-кнопку (чистое взаимодействие)
+document.getElementById("guestName").addEventListener("input", () => {
+  telegramContainer.style.display = "none";
+});
 
 /**
  * Плавное появление элементов таймлайна при прокрутке.
