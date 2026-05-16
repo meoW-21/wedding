@@ -112,7 +112,7 @@ toggleExtraFields();
 // ---------- ОТПРАВКА В GOOGLE SHEETS ----------
 // Замените URL ниже на адрес вашего веб-приложения Apps Script
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzUgXwsXOku8FkkhwS9LoV4RCuefY6JBMtT9wthaaFsRajyigX_133EPfK48dUfaLyqxQ/exec";
+  "https://script.google.com/macros/s/AKfycbzkvs7630mfCYFBOyPq64InP_1o07UkNqNw1Z5evO_cXlo33jsqWMjhnnWIKzu2BQ/exec";
 
 const form = document.getElementById("weddingForm");
 const submitBtn = document.getElementById("submitBtn");
@@ -182,7 +182,7 @@ function validateForm() {
 async function submitToGoogleSheets(data) {
   if (
     GOOGLE_SCRIPT_URL ===
-    "https://script.google.com/macros/s/AKfycbzUgXwsXOku8FkkhwS9LoV4RCuefY6JBMtT9wthaaFsRajyigX_133EPfK48dUfaLyqxQ/exec"
+    "https://script.google.com/macros/s/AKfycbzkvs7630mfCYFBOyPq64InP_1o07UkNqNw1Z5evO_cXlo33jsqWMjhnnWIKzu2BQ/exec"
   ) {
     console.warn(
       "⚠️ Google Sheets URL не настроен. Данные не отправлены, но вы можете скопировать настройки.",
