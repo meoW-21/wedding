@@ -268,55 +268,45 @@
               <div class="field-note">Это поможет нам с рассадкой</div>
             </div>
 
-            <!-- Напитки (чекбоксы) с добавленными Пиво и Коньяк -->
-            <div class="field-group">
-              <label
-                >Ваши предпочтения по напиткам (можно несколько
-                вариантов)</label
-              >
-              <div class="checkbox-grid" id="drinksChecklist">
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="drinkWhiteWine"
-                    value="Вино белое"
-                  />
-                  <label for="drinkWhiteWine">🍾 Вино белое</label>
-                </div>
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="drinkRedWine"
-                    value="Вино красное"
-                  />
-                  <label for="drinkRedWine">🍷 Вино красное</label>
-                </div>
-                <div class="checkbox-item">
-                  <input type="checkbox" id="drinkWhisky" value="Виски" />
-                  <label for="drinkWhisky">🥃 Виски</label>
-                </div>
-                <div class="checkbox-item">
-                  <input type="checkbox" id="drinkVodka" value="Водка" />
-                  <label for="drinkVodka">🍸 Водка</label>
-                </div>
-                <!-- Новые варианты -->
-                <div class="checkbox-item">
-                  <input type="checkbox" id="drinkBeer" value="Пиво" />
-                  <label for="drinkBeer">🍺 Пиво</label>
-                </div>
-                <div class="checkbox-item">
-                  <input type="checkbox" id="drinkCognac" value="Коньяк" />
-                  <label for="drinkCognac">🥃 Коньяк</label>
-                </div>
-                <div class="checkbox-item" id="nonAlcoholWrap">
-                  <input type="checkbox" id="drinkNone" value="Не пью" />
-                  <label for="drinkNone">🚫 Не пью алкоголь</label>
-                </div>
-              </div>
-              <div class="field-note">
-                Если вы не пьете алкоголь, отметьте "не пью"
-              </div>
-            </div>
+            <!-- Напитки (чекбоксы) с добавленными Пиво, Коньяк и Игристое -->
+                <div class="field-group">
+                    <label>Ваши предпочтения по напиткам (можно несколько вариантов)</label>
+                    <div class="checkbox-grid" id="drinksChecklist">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkSparkling" value="Игристое">
+                            <label for="drinkSparkling">🍾 Игристое</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkWhiteWine" value="Вино белое">
+                            <label for="drinkWhiteWine">🥂 Вино белое</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkRedWine" value="Вино красное">
+                            <label for="drinkRedWine">🍷 Вино красное</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkWhisky" value="Виски">
+                            <label for="drinkWhisky">🥃 Виски</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkVodka" value="Водка">
+                            <label for="drinkVodka">🍸 Водка</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkBeer" value="Пиво">
+                            <label for="drinkBeer">🍺 Пиво</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="drinkCognac" value="Коньяк">
+                            <label for="drinkCognac">🥃 Коньяк</label>
+                        </div>
+                        <!-- Новый пункт: Игристое -->
+                        
+                        <div class="checkbox-item" id="nonAlcoholWrap">
+                            <input type="checkbox" id="drinkNone" value="Не пью">
+                            <label for="drinkNone">🚫 Не пью алкоголь</label>
+                        </div>
+                    </div>
           </div>
 
           <button type="submit" id="submitBtn">📩 Отправить ответ</button>

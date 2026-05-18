@@ -1,17 +1,26 @@
 // ---------- НАСТРОЙКИ ----------
-const TELEGRAM_URL = "https://t.me/+tYv0RJXaaeYxYTEy"; // <-- ЗАМЕНИТЕ НА РЕАЛЬНУЮ ССЫЛКУ
+const TELEGRAM_URL = "https://t.me/+tYv0RJXaaeYxYTEy"; // ЗАМЕНИТЕ НА РЕАЛЬНУЮ ССЫЛКУ
 
-// ---------- ЛОГИКА ЧЕКБОКСОВ "НЕ ПЬЮ" (включая новые напитки) ----------
+// ---------- ЛОГИКА ЧЕКБОКСОВ "НЕ ПЬЮ" (включая игристое) ----------
 const whiteWine = document.getElementById("drinkWhiteWine");
 const redWine = document.getElementById("drinkRedWine");
 const whisky = document.getElementById("drinkWhisky");
 const vodka = document.getElementById("drinkVodka");
 const beer = document.getElementById("drinkBeer");
 const cognac = document.getElementById("drinkCognac");
+const sparkling = document.getElementById("drinkSparkling"); // новый элемент
 const noneAlcohol = document.getElementById("drinkNone");
 
-// Все алкогольные чекбоксы (исключая "не пью")
-const alcoholCheckboxes = [whiteWine, redWine, whisky, vodka, beer, cognac];
+// Все алкогольные чекбоксы (включая игристое, исключая "не пью")
+const alcoholCheckboxes = [
+  whiteWine,
+  redWine,
+  whisky,
+  vodka,
+  beer,
+  cognac,
+  sparkling,
+];
 
 function applyNonAlcoholLogic() {
   if (noneAlcohol && noneAlcohol.checked) {
