@@ -245,8 +245,11 @@ button:disabled {
 
 /* ========== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ========== */
 @media (max-width: 768px) {
+  .form-container {
+    border-radius: 20px;
+  }
   .form-inner {
-    padding: 1.5rem 1.25rem;
+    padding: 1.5rem;
   }
   .hero h1 {
     font-size: 2rem;
@@ -329,9 +332,6 @@ button:disabled {
   }
   .hero h1 {
     font-size: 1.8rem;
-  }
-  .form-container {
-    border-radius: 20px;
   }
 }
 
